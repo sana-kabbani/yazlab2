@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UyeActivity">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="344dp"
+        android:layout_height="81dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Üye Olun "
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeOgrNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/default_user"
+
+        />
+
+    <Button
+        android:id="@+id/UyeBtnPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="Resim Seç"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
+
+    <EditText
+        android:id="@+id/UyeEmail"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="E-Posta"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyePass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeAdSoyad" />
+
+    <EditText
+        android:id="@+id/UyeOgrNo"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Öğrenci Numarası"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeAdSoyad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/UyeAdSoyad"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Ad Soyad"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeOgrNo" />
+
+    <EditText
+        android:id="@+id/UyePass"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeAdres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeEmail" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="348dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+
+        android:autofillHints="Bölüm" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="350dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+
+        android:autofillHints="Bölüm" />
+
+    <EditText
+        android:id="@+id/UyeAdres"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Adres"
+        android:inputType="textMultiLine"
+        android:textSize="20sp"
+        android:height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeSinif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyePass" />
+
+    <EditText
+        android:id="@+id/UyeSinif"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Sınıf"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeAdres" />
+
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="Doğum Tarihi" />
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <Button
+            android:id="@+id/UyeButtonKayit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="Kayıt ol"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UyeDate" />
+
+        <Button
+
+            android:id="@+id/uyeGirisBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giris Yap"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

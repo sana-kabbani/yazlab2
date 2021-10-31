@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PsifirlaActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="34dp"
+        android:text="Parola Sıfırlama"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/pSifirlaMsj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pSifirlaMsj"
+        android:layout_width="283dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="25dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pSifirlaEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/pSifirlaEmail"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
+        android:ems="10"
+        android:hint="E-posta adrsini yazınız"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pSifirlaMsj" />
+
+    <Button
+        android:id="@+id/pSifirlaBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="32dp"
+        android:text="Parolamı Sıfırla"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/pSifirlaGiris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pSifirlaMsj" />
+
+    <Button
+        android:id="@+id/pSifirlaGiris"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="24dp"
+        android:text="Giriş Yap"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pSifirlaBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

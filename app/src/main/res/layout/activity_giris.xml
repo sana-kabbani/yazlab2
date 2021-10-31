@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GirisActivity">
+
+    <EditText
+        android:id="@+id/UyeGirisEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="E-posta"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeGirisPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/UyeGirisPass"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeGirisButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeGirisEmail" />
+
+    <Button
+        android:id="@+id/UyeGirisButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="109dp"
+        android:text="Giriş"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeGirisUnutPass"
+        app:layout_constraintEnd_toStartOf="@+id/UyeGirisButtonKayit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeGirisPass" />
+
+    <TextView
+        android:id="@+id/UyeGirisText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="9dp"
+        android:text="Giriş Yap"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeGirisEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/UyeGirisUnutPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Şifremi unuttum!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeGirisButton" />
+
+    <Button
+        android:id="@+id/UyeGirisButtonKayit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="109dp"
+        android:text="Kayıt ol"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeGirisUnutPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/UyeGirisButton"
+        app:layout_constraintTop_toBottomOf="@+id/UyeGirisPass" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -309,7 +309,7 @@ class YazOkulu : AppCompatActivity() {
 
                 // below line is used to set the name of
                 // our PDF file and its path.
-                val file = File(Environment.getExternalStorageDirectory(), "$ogrno.pdf")
+                val file = File(Environment.getExternalStorageDirectory(), "$ogrno-$adisoyadi.pdf\"")
                 try {
 
                     pdfDocument.writeTo(FileOutputStream(file))

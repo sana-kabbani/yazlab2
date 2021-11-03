@@ -57,6 +57,18 @@ class basvurlarActivity : AppCompatActivity() {
             finish()
 
         }
+        binding.capbutton.setOnClickListener{
+            intent = Intent(applicationContext,Cap::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+        binding.dersintibakibutton.setOnClickListener{
+            intent = Intent(applicationContext,Dersintibaki::class.java)
+            startActivity(intent)
+            finish()
+
+        }
 
     }
 }

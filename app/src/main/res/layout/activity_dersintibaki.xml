@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UyeActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/derstitle"
+            android:layout_width="344dp"
+            android:layout_height="81dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="64dp"
+            android:text="Ders intibaki Başvuru"
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/UyeOgrNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kişisel Bilgiler"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:textSize="25dp"></TextView>
+
+
+
+        <EditText
+            android:id="@+id/dersTc"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="T.C"
+            android:inputType="number"
+            android:textSize="20sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+
+        <!--
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="348dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+
+                        android:autofillHints="Bölüm"
+                        tools:ignore="SpeakableTextPresentCheck" /> -->
+
+
+
+        <EditText
+            android:id="@+id/dersphone"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Telefon No"
+            android:inputType="number"
+
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dersler "
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:textSize="25dp"></TextView>
+
+        <Spinner
+            android:id="@+id/dersspinner"
+            android:layout_width="348dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+
+            android:autofillHints="Ders Sayısı"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+        <EditText
+            android:id="@+id/ders1"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Ders adi"
+
+            android:textSize="20sp"
+            />
+        <EditText
+            android:id="@+id/basarinotu"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Başarı Notu"
+
+            android:textSize="20sp"
+            />
+
+
+
+        <EditText
+            android:id="@+id/akts"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Dersin Akts"
+            android:inputType="number"
+            android:textSize="20sp"
+            />
+
+
+        <EditText
+            android:id="@+id/ders2"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="2.Ders adi"
+
+            android:textSize="20sp"
+            />
+        <EditText
+            android:id="@+id/basarinotu2"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Başarı Notu"
+
+            android:textSize="20sp"
+            />
+
+
+
+        <EditText
+            android:id="@+id/akts2"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Dersin Akts"
+            android:inputType="number"
+            android:textSize="20sp"
+            />
+
+
+
+
+
+
+
+        <Button
+            android:id="@+id/btnPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Form Pdf'i Oluştur" />
+
+        <LinearLayout
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <Button
+                android:id="@+id/btnyukle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Imzalı Pdf Yükle"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UyeDate" />
+
+            <Button
+
+                android:id="@+id/btnonayla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onayla"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

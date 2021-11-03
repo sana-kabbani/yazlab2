@@ -28,6 +28,7 @@ class YatayGecic : AppCompatActivity() {
     var mydate: Date? = null
     var dateFormat: DateFormat? = null
 
+
         lateinit var binding: ActivityYatayGecicBinding
         lateinit var tc: EditText
 
@@ -116,6 +117,7 @@ class YatayGecic : AppCompatActivity() {
             })
         }
         fun generatePDF() {
+            mydate = Date()
             tc = findViewById(R.id.yatayTc)
             gnortalama = findViewById(R.id.genoortalama)
 
@@ -356,7 +358,9 @@ class YatayGecic : AppCompatActivity() {
 
                 // below line is used to set the name of
                 // our PDF file and its path.
-            var  dateFormat = SimpleDateFormat("dd/MM/yy")
+
+
+
                 val file = File(Environment.getExternalStorageDirectory(), "$ogrno-$adisoyadi.pdf")
                 try {
 

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UyeActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/captitle"
+            android:layout_width="344dp"
+            android:layout_height="81dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="64dp"
+            android:text="Çift Andal Programı "
+            android:textAlignment="center"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/UyeOgrNo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kişisel Bilgiler"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:textSize="25dp"></TextView>
+
+
+
+        <EditText
+            android:id="@+id/capTc"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="T.C"
+            android:inputType="number"
+            android:textSize="20sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+
+        <!--
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="348dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+
+                        android:autofillHints="Bölüm"
+                        tools:ignore="SpeakableTextPresentCheck" /> -->
+
+
+
+        <EditText
+            android:id="@+id/capphone"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Telefon No"
+            android:inputType="number"
+
+            android:textSize="20sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eğitim Bilgileri "
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:textSize="25dp"></TextView>
+
+
+        <EditText
+            android:id="@+id/capfak"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Anadal Fakültesi"
+
+            android:textSize="20sp"
+            />
+
+
+        <EditText
+            android:id="@+id/capbolum"
+            android:layout_width="346dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Anadal Bölümü"
+
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/capsinif"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="Sınıf"
+            android:inputType="number"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/gano"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:height="50dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Genel Not Ortalaması"
+            android:inputType="number"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Program Tercihi"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:textSize="25dp"></TextView>
+
+
+        <EditText
+            android:id="@+id/captercih"
+            android:layout_width="347dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:ems="10"
+            android:hint="program tercihi"
+
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnPdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:text="Form Pdf'i Oluştur" />
+
+        <LinearLayout
+            android:layout_width="356dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <Button
+                android:id="@+id/btnyukle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:text="Imzalı Pdf Yükle"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UyeDate" />
+
+            <Button
+
+                android:id="@+id/btnonayla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Onayla"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

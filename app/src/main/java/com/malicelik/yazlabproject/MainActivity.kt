@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     var databaseReference: DatabaseReference?=null //database refreanse almak için
     var database: FirebaseDatabase?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         databaseReference=database?.reference!!.child("profile")
         var currentUser = auth.currentUser
         binding.UyeProfilEmail.text = "Email: "+currentUser?.email
+
 
         //realtime - database'deki id ye ulaşıp altındaki childların içindeki veriyi sayfaya aktarıyoruz.
         var userReference = databaseReference?.child(currentUser?.uid!!)

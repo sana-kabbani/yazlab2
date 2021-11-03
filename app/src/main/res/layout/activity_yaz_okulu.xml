@@ -9,19 +9,19 @@
     tools:context=".UyeActivity">
 
 
-<LinearLayout
-    android:orientation="vertical"
-    android:weightSum="10"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+  <LinearLayout
+      android:orientation="vertical"
+      android:weightSum="10"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/title"
         android:layout_width="344dp"
         android:layout_height="81dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="64dp"
-        android:text="Üye Olun "
+        android:text="Yaz Okulu Başvursu "
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/UyeOgrNo"
@@ -30,29 +30,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginLeft="25dp"
-        android:src="@drawable/default_user"
 
-        />
-
-    <Button
-        android:id="@+id/UyeBtnPicture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:text="Resim Seç"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
 
     <EditText
-        android:id="@+id/UyeEmail"
+        android:id="@+id/UyeTc"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -60,62 +41,16 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="E-Posta"
-        android:inputType="textEmailAddress"
+        android:hint="T.C"
+android:inputType="number"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyePass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeAdSoyad" />
 
-    <EditText
-        android:id="@+id/UyeOgrNo"
-        android:layout_width="343dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:hint="Öğrenci Numarası"
-        android:inputType="number"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeAdSoyad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+         />
 
-    <EditText
-        android:id="@+id/UyeAdSoyad"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Ad Soyad"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeOgrNo" />
 
-    <EditText
-        android:id="@+id/UyePass"
-        android:layout_width="346dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Şifre"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeAdres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeEmail" />
+
 
     <Spinner
         android:id="@+id/spinner"
@@ -127,18 +62,61 @@
         android:autofillHints="Bölüm"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
+    <EditText
+        android:id="@+id/dersadi"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="1.Ders Adı"
 
-        android:autofillHints="Bölüm"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeAdSoyad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/UyeAdres"
+        android:id="@+id/derskodu"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Ders Kodu"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeOgrNo" />
+
+    <EditText
+        android:id="@+id/derskredi"
+        android:layout_width="346dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Ders Kredisi"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeAdres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeEmail" />
+
+
+
+
+
+    <EditText
+        android:id="@+id/dersadi2"
         android:layout_width="347dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -147,7 +125,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Adres"
+        android:hint="2.Ders Adı"
         android:inputType="textMultiLine"
         android:textSize="20sp"
         android:height="50dp"
@@ -157,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/UyePass" />
 
     <EditText
-        android:id="@+id/UyeSinif"
+        android:id="@+id/derskodu2"
         android:layout_width="347dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -165,7 +143,24 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="Sınıf"
+        android:hint="Ders Kodu"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/UyeDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeAdres" />
+
+    <EditText
+        android:id="@+id/derskredi2"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Ders Kredi"
         android:inputType="number"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/UyeDate"
@@ -174,45 +169,45 @@
         app:layout_constraintTop_toBottomOf="@+id/UyeAdres" />
 
     <Button
-        android:id="@+id/btnDate"
+        android:id="@+id/btnPdf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:text="Doğum Tarihi" />
+        android:text="Form Pdf'i Oluştur" />
 
     <LinearLayout
         android:layout_width="356dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp">
 
-        <Button
-            android:id="@+id/UyeButtonKayit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:text="Kayıt ol"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UyeDate" />
+      <Button
+          android:id="@+id/btnyukle"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="24dp"
+          android:text="Imzalı Pdf Yükle"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/UyeDate" />
 
-        <Button
+      <Button
 
-            android:id="@+id/uyeGirisBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Giris Yap"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
+          android:id="@+id/btnonayla"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Onayla"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
     </LinearLayout>
 
-</LinearLayout>
+  </LinearLayout>
 
 </ScrollView>

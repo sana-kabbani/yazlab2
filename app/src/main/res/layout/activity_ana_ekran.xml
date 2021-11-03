@@ -10,7 +10,7 @@
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
+        android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,32 +21,32 @@
     <Button
         android:id="@+id/basvuruBtn"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="70dp"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="204dp"
         android:layout_marginEnd="41dp"
-        android:layout_marginBottom="32dp"
         android:text="Başvurular"
+        app:layout_constraintBaseline_toBaselineOf="@+id/RaporBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/RaporBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="31dp"
+        android:text="Raporlar"
         app:layout_constraintBottom_toTopOf="@+id/formBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/RaporBtn"
-        android:layout_width="0dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="43dp"
-        android:text="Raporlar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/basvuruBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/formBtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="327dp"
+        android:layout_height="80dp"
         android:layout_marginStart="44dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="226dp"
@@ -54,6 +54,6 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/basvuruBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/RaporBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

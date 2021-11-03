@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.malicelik.yazlabproject">
 
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -16,6 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YazLabProject">
+        <activity
+            android:name=".Dgs"
+            android:exported="false" />
+        <activity
+            android:name=".YatayGecic"
+            android:exported="false" />
+        <activity
+            android:name=".YazOkulu"
+            android:exported="false" />
+        <activity
+            android:name=".basvurlarActivity"
+            android:exported="true" />
         <activity
             android:name=".AnaEkran"
             android:exported="false" />
@@ -40,7 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

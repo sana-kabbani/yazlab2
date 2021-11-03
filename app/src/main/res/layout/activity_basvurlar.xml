@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".basvurlarActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:menu="@menu/menu" />
+
+    <Button
+        android:id="@+id/yazbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="15dp"
+        android:text="YazOkul Başvuru"
+        android:textColorHighlight="#814343"
+        app:layout_constraintBottom_toTopOf="@+id/yataybutton"
+        app:layout_constraintEnd_toEndOf="@+id/yataybutton"
+        app:layout_constraintStart_toStartOf="@+id/yataybutton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yataybutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+
+        android:text="yataygeçiş Başvuru"
+        app:layout_constraintBottom_toTopOf="@+id/dgsbutton"
+        app:layout_constraintEnd_toEndOf="@+id/dgsbutton"
+        app:layout_constraintStart_toStartOf="@+id/dgsbutton"
+        app:layout_constraintTop_toBottomOf="@+id/yazbutton" />
+
+    <Button
+        android:id="@+id/dgsbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+
+        android:text="DGS Başvurusu"
+        app:layout_constraintBottom_toTopOf="@+id/capbutton"
+        app:layout_constraintEnd_toEndOf="@+id/capbutton"
+        app:layout_constraintStart_toStartOf="@+id/capbutton"
+        app:layout_constraintTop_toBottomOf="@+id/yataybutton" />
+
+
+    <Button
+        android:id="@+id/capbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+
+        android:text="ÇAP Başvurusu"
+        app:layout_constraintBottom_toTopOf="@+id/dersintibakibutton"
+        app:layout_constraintEnd_toEndOf="@+id/dersintibakibutton"
+        app:layout_constraintStart_toStartOf="@+id/dersintibakibutton"
+        app:layout_constraintTop_toBottomOf="@+id/dgsbutton" />
+
+    <Button
+        android:id="@+id/dersintibakibutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="142dp"
+
+        android:text="Ders Intibakı Başvurusu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capbutton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

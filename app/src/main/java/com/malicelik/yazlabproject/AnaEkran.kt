@@ -4,9 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.malicelik.yazlabproject.databinding.ActivityAnaEkranBinding
+
 
 
 class AnaEkran : AppCompatActivity() {
@@ -41,11 +43,18 @@ class AnaEkran : AppCompatActivity() {
                 }
 
             }
+
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
 
         })
+        binding.basvuruBtn.setOnClickListener{
+            intent = Intent(applicationContext,basvurlarActivity::class.java)
+            startActivity(intent)
+            finish()
+
+        }
 
         binding.bottomNav.setOnNavigationItemReselectedListener {
 
@@ -65,6 +74,16 @@ class AnaEkran : AppCompatActivity() {
 
 
         }
+
+
+// MainActivity : onCreate
+// in my code fab button in the main activity common for all fragment.
+       // binding.basvuruBtn.setOnClickListener {
+
+         //  getSupportFragmentManager().beginTransaction().replace(R.id.container, basvurlarFragment()).commit();
+
+
+      //  }
 
     }
 }

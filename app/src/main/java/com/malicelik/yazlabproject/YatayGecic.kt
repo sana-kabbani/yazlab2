@@ -1,6 +1,7 @@
 package com.malicelik.yazlabproject
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.Paint
@@ -115,6 +116,14 @@ class YatayGecic : AppCompatActivity() {
 
                 generatePDF()
             })
+
+            binding.btnPdfUpload.setOnClickListener {
+                val namedata= binding.title.text.toString()
+                val intent = Intent(this,PdfUploadActivity::class.java)
+                intent.putExtra("name",namedata)
+                startActivity(intent)
+                onPause()
+            }
         }
         fun generatePDF() {
             mydate = Date()

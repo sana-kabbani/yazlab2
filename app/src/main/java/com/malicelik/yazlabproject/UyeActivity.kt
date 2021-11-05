@@ -45,6 +45,11 @@ class UyeActivity : AppCompatActivity() {
         databaseReference=database?.reference!!.child("profile")
 
 
+
+
+
+
+
         options=findViewById(R.id.spinner)
         var f="Fakültesi"
         val fakulte= listOf("Teknoloji ${f}","Mühendislik ${f}","Eğitim ${f}","Spor Bilimleri ${f}","İletişim ${f}")

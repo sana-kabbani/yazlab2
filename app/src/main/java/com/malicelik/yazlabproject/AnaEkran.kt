@@ -28,7 +28,6 @@ class AnaEkran : AppCompatActivity() {
 
         // var rol=0
         var currentUser = auth.currentUser
-        binding.RaporBtn.setVisibility(View.INVISIBLE)
         //rdb'de bulunan kullanıcı idsine erişme
         var userReference = databaseReference?.child(currentUser?.uid!!)
         userReference?.addValueEventListener(object : ValueEventListener {
@@ -38,8 +37,23 @@ class AnaEkran : AppCompatActivity() {
                 //rol=snapshot.child("rol").value.toString().toInt()
                 rol=snapshot.child("rol").value.toString().toInt()
                 if(rol==2){
-                    binding.RaporBtn.setVisibility(View.VISIBLE)
-                    binding.formBtn.setVisibility(View.INVISIBLE)
+                    binding.formBtn.text="Raporlar"
+                    binding.formBtn.setOnClickListener {
+                        intent = Intent(applicationContext,raporlarActivity::class.java)
+                        startActivity(intent)
+                        onPause()
+                    }
+                }else{
+                    binding.formBtn.text="Gönderilen Başvurular"
+                    binding.formBtn.setOnClickListener {
+                        intent = Intent(applicationContext,formlarActivity::class.java)
+                        startActivity(intent)
+                        onPause()
+                    }
+
+
+
+
                 }
 
             }
@@ -52,7 +66,7 @@ class AnaEkran : AppCompatActivity() {
         binding.basvuruBtn.setOnClickListener{
             intent = Intent(applicationContext,basvurlarActivity::class.java)
             startActivity(intent)
-            finish()
+            onPause()
 
         }
 
@@ -60,30 +74,21 @@ class AnaEkran : AppCompatActivity() {
 
             if(it.itemId==R.id.ic_home){
                 startActivity(Intent(this@AnaEkran,AnaEkran::class.java))
-                finish()
+                onPause()
             }
             else if(it.itemId==R.id.ic_profile){
                 startActivity(Intent(this@AnaEkran,MainActivity::class.java))
-                finish()
+                onPause()
             }else if(it.itemId==R.id.ic_exit){
                 auth.signOut()
                 startActivity(Intent(this@AnaEkran,GirisActivity::class.java))
-                finish()
+                onPause()
             }
 
 
 
         }
 
-
-// MainActivity : onCreate
-// in my code fab button in the main activity common for all fragment.
-       // binding.basvuruBtn.setOnClickListener {
-
-         //  getSupportFragmentManager().beginTransaction().replace(R.id.container, basvurlarFragment()).commit();
-
-
-      //  }
 
     }
 }

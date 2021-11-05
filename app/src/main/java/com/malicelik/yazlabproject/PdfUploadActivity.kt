@@ -8,20 +8,21 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
-import com.malicelik.yazlabproject.databinding.ActivityImageUploadBinding
 import com.malicelik.yazlabproject.databinding.ActivityPdfUploadBinding
 
-class ImageUploadActivity : AppCompatActivity() {
+class PdfUploadActivity : AppCompatActivity() {
     //Activty bağlayıcı
-    private lateinit var binding:ActivityImageUploadBinding
+    private lateinit var binding:ActivityPdfUploadBinding
 
     //firebase yetkilendirme
     private  lateinit var firebaseAuth: FirebaseAuth
@@ -34,18 +35,31 @@ class ImageUploadActivity : AppCompatActivity() {
 
     private  var pdfUri: Uri?= null
 
+
     //Tag
     private val TAG ="PDF_ADD_TAG"
+
+    private var basvuruTipi = ""
+
+    //user bilgileri
+
+    //private lateinit var auth: FirebaseAuth
+
+    var databaseReference: DatabaseReference? = null //database refreanse almak için
+    var database: FirebaseDatabase? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityImageUploadBinding.inflate(layoutInflater)
+        binding= ActivityPdfUploadBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
         //init firebase auth
         firebaseAuth =  FirebaseAuth.getInstance()
 
-
+        //init database
+        database = FirebaseDatabase.getInstance()
 
         //progress dialog kurulumu
         progressDialog= ProgressDialog(this)
@@ -53,15 +67,21 @@ class ImageUploadActivity : AppCompatActivity() {
         progressDialog.setCanceledOnTouchOutside(false)
 
         //handle click, goback
-
+        
 
         //pdf secme durumu
-        binding.btnSec.setOnClickListener {
+        binding.btnPdfSec.setOnClickListener {
             pdfPicIntent()
         }
 
         //pdf yukleme durumu
-        binding.btnYukle.setOnClickListener {
+        binding.btnPdfYukle.setOnClickListener {
+            //1.Validate Data
+            //2.Upload pdf to firebase storage
+            //3.Get url of uploaded pdf
+            //4. Upload pdf info to firebase db
+
+
 
             //1. Verileri Doğrula
             //2. pdf dosyasını firebase deposuna yükle
@@ -70,6 +90,13 @@ class ImageUploadActivity : AppCompatActivity() {
             validateData()
         }
 
+        basvuruTipi = intent.getStringExtra("name").toString()
+
+        if(basvuruTipi!= null){
+            binding.pdfUploadTitle.setText(basvuruTipi)
+
+            binding.pdfUploadAciklama.setText("Lütfen oluşturduğunuz " +   basvuruTipi + " PDF'ini imzalayıp yükleyiniz. Aksi halde yüklenen pdfler geçersiz kabul edilecektir!")
+        }
 
     }
     private var pdfdurum = 1
@@ -96,7 +123,7 @@ class ImageUploadActivity : AppCompatActivity() {
         val timestamp = System.currentTimeMillis()
 
         // path of pdf in firebase storage
-        val filePathAndName = "Image/$timestamp"
+        val filePathAndName = "Pdf/$timestamp"
 
         //storage referance
         val storageReference = FirebaseStorage.getInstance().getReference(filePathAndName)
@@ -125,30 +152,36 @@ class ImageUploadActivity : AppCompatActivity() {
         //4. Firebase db'ye pdf bilgisi yükleyin
         Log.d(TAG,"uploadPdfInfoToDb: uploading to db")
         progressDialog.setMessage("Uploading pdf info..")
-        //uid
+
+
         val uid=firebaseAuth.uid
+        var currentUser = firebaseAuth.currentUser
+        val userid = currentUser?.uid
+
+
+
+
+
+
 
         //setup data to upload
         val hashMap: HashMap <String,Any> = HashMap()
-        hashMap["uid"]="$uid"
-        hashMap["id"]="$timestamp"
+
+        hashMap["basvurutipi"]=basvuruTipi
         hashMap["durum"]= pdfdurum
         hashMap["url"]="$uploadedPdfUrl"
         hashMap["timestamp"]= timestamp
 
-        //db reference DB >
-        val ref = FirebaseDatabase.getInstance().getReference("image")
-        ref.child("$timestamp")
-            .setValue(hashMap)
+
+        //RealTimeDataBase PDF Bilgilerini Yükleme
+        val ref = FirebaseDatabase.getInstance().getReference("profile")
+        ref.child("$userid")
+            .child("pdf").child("$timestamp").setValue(hashMap)
             .addOnSuccessListener {
                 Log.d(TAG,"uploadPdfInfoToDb:  uploadED TO DB ")
                 progressDialog.dismiss()
                 Toast.makeText(this,"Uploded...",Toast.LENGTH_LONG).show()
                 pdfUri=null
-
-
-
-
             }
             .addOnFailureListener{ e->
 
@@ -160,32 +193,43 @@ class ImageUploadActivity : AppCompatActivity() {
 
 
 
+        //pdf id güncelle +1 ekle
+
 
     }
+
+    private fun yuklePdfBilgi(userid: String?, timestamp: Int, hashMap: HashMap<String, Any>) {
+
+
+    }
+
+
+
+
 
     private fun pdfPicIntent(){
 
         Log.d(TAG,"pdfPickIntent: starting pdf pick intent")
 
         val intent = Intent()
-        intent.type= "img/*"
+        intent.type= "application/pdf"
         intent.action=Intent.ACTION_GET_CONTENT
         pdfActivityRestultLauncher.launch(intent)
 
     }
 
     val pdfActivityRestultLauncher= registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult(),
-        ActivityResultCallback<ActivityResult>{ result ->
-            if(result.resultCode== RESULT_OK){
-                Log.d(TAG,"PDF SEÇİNİZ")
-                pdfUri=result.data!!.data
+            ActivityResultContracts.StartActivityForResult(),
+            ActivityResultCallback<ActivityResult>{ result ->
+                if(result.resultCode== RESULT_OK){
+                    Log.d(TAG,"PDF SEÇİNİZ")
+                    pdfUri=result.data!!.data
+                }
+                else{
+                    Log.d(TAG,"PDF Pick cancelled")
+                    Toast.makeText(this,"Cancelled", Toast.LENGTH_LONG).show()
+                }
             }
-            else{
-                Log.d(TAG,"PDF Pick cancelled")
-                Toast.makeText(this,"Cancelled", Toast.LENGTH_LONG).show()
-            }
-        }
 
 
     )

@@ -178,35 +178,20 @@ android:inputType="number"
         android:layout_marginBottom="8dp"
         android:text="Form Pdf'i Oluştur" />
 
+    <Button
+        android:id="@+id/btnPdfUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="Yükle"  />
+
     <LinearLayout
         android:layout_width="356dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp">
-
-      <Button
-          android:id="@+id/btnyukle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginEnd="24dp"
-          android:text="Imzalı Pdf Yükle"
-          android:textSize="16sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/UyeDate" />
-
-      <Button
-
-          android:id="@+id/btnonayla"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="Onayla"
-          android:textSize="16sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
-    </LinearLayout>
+        android:layout_margin="20dp"/>
 
   </LinearLayout>
 

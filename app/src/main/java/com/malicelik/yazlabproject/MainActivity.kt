@@ -3,6 +3,7 @@ package com.malicelik.yazlabproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     var databaseReference: DatabaseReference?=null //database refreanse almak için
     var database: FirebaseDatabase?=null
-
+    var rol = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
@@ -24,13 +25,26 @@ class MainActivity : AppCompatActivity() {
         databaseReference=database?.reference!!.child("profile")
         var currentUser = auth.currentUser
         binding.UyeProfilEmail.text = "Email: "+currentUser?.email
-
-
         //realtime - database'deki id ye ulaşıp altındaki childların içindeki veriyi sayfaya aktarıyoruz.
         var userReference = databaseReference?.child(currentUser?.uid!!)
         userReference?.addValueEventListener(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                binding.UyeProfilAdSoyad.text = "Adınız: "+ snapshot.child("adisoyadi").value.toString()
+                binding.uyeProfilAdSoyad.text = "Adınız: "+ snapshot.child("adisoyadi").value.toString()
+                rol =  snapshot.child("rol").value.toString().toInt()
+                if(rol==2){
+                    binding.uyeProfilFakulte.setVisibility(View.INVISIBLE)
+                    binding.uyeProfilDogum.setVisibility(View.INVISIBLE)
+                    binding.uyeProfilSinif.setVisibility(View.INVISIBLE)
+                    binding.uyeProfilBolum.setVisibility(View.INVISIBLE)
+                    binding.uyeProfilNumara.setVisibility(View.INVISIBLE)
+                }else{
+                    binding.uyeProfilBolum.text = snapshot.child("bolum").value.toString()
+                    binding.uyeProfilNumara.text = "Öğrenci Numaranız: "+ snapshot.child("ogrencino").value.toString()
+                    binding.uyeProfilSinif.text = "Sınıfınız: "+snapshot.child("sinif").value.toString()
+                    binding.uyeProfilDogum.text = "Dogum Tarihiniz: "+snapshot.child("tarih").value.toString()
+                    binding.uyeProfilFakulte.text = snapshot.child("fakulte").value.toString()
+
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -38,6 +52,10 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
+
+
+
+
 
         binding.bottomNav.setOnNavigationItemReselectedListener {
 

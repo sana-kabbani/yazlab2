@@ -3,6 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_ana_ekran.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_basvurlar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_basvuru_devam.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_cap.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_cap_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_dersintibaki.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_dersintibaki_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_dgs.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_dgs_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_formlar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_formlar2.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_image_upload.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_pdf_upload.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_raporlar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_uye.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_yatay_gecic.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_yatay_gecic_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_yaz_okulu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/activity_yaz_okulu_list.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/malic/Desktop/yazlab2-master/app/src/main/res/layout/recycler_row.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/sana/AndroidStudioProjects/yazlab2/app/src/main/res/drawable/ic_baseline_book_24.xml" value="0.2490740740740741" />
         <entry key="..\:/Users/sana/AndroidStudioProjects/yazlab2/app/src/main/res/drawable/ic_baseline_contacts_24.xml" value="0.25462962962962965" />
         <entry key="..\:/Users/sana/AndroidStudioProjects/yazlab2/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.25462962962962965" />
@@ -27,7 +48,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="17" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

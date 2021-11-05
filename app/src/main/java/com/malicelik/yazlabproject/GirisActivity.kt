@@ -19,7 +19,7 @@ class GirisActivity : AppCompatActivity() {
         //oturum açık mı kontrolü
         var currentUser = auth.currentUser
        if (currentUser!= null){
-            startActivity(Intent(this@GirisActivity,MainActivity::class.java))
+            startActivity(Intent(this@GirisActivity,AnaEkran::class.java))
             finish()
         }
         // giriş yap butona tıklandığında
@@ -37,7 +37,7 @@ class GirisActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(girisemail,girisparola)
                 .addOnCompleteListener(this){
                     if (it.isSuccessful){
-                        intent = Intent(applicationContext,MainActivity::class.java)
+                        intent = Intent(applicationContext,AnaEkran::class.java)
                         startActivity(intent)
                         finish()
                     }else{

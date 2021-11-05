@@ -1,6 +1,7 @@
 package com.malicelik.yazlabproject
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.Paint
@@ -50,7 +51,7 @@ class YazOkulu : AppCompatActivity() {
 
     lateinit var options: Spinner
     private lateinit var auth: FirebaseAuth
-
+    var rol=0
     var databaseReference: DatabaseReference? = null //database refreanse almak için
     var database: FirebaseDatabase? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,6 +77,7 @@ class YazOkulu : AppCompatActivity() {
                 sinif = snapshot.child("sinif").value.toString()
                 adisoyadi = snapshot.child("adisoyadi").value.toString()
                 ogrno = snapshot.child("ogrencino").value.toString()
+                rol=snapshot.child("rol").value.toString().toInt()
 
             }
 
@@ -126,7 +128,21 @@ class YazOkulu : AppCompatActivity() {
 
             generatePDF()
         })
-    }
+
+
+        binding.btnPdfUpload.setOnClickListener {
+            val namedata= binding.title.text.toString()
+            val intent = Intent(this,PdfUploadActivity::class.java)
+            intent.putExtra("name",namedata)
+            startActivity(intent)
+            onPause()
+        }
+    }//oncreate end
+
+
+
+
+
         fun generatePDF() {
             tc = findViewById(R.id.UyeTc)
 
@@ -309,7 +325,7 @@ class YazOkulu : AppCompatActivity() {
 
                 // below line is used to set the name of
                 // our PDF file and its path.
-                val file = File(Environment.getExternalStorageDirectory(), "$ogrno-$adisoyadi.pdf\"")
+                val file = File(Environment.getExternalStorageDirectory(), "$ogrno-$adisoyadi.pdf")
                 try {
 
                     pdfDocument.writeTo(FileOutputStream(file))
@@ -331,6 +347,7 @@ class YazOkulu : AppCompatActivity() {
 
 
         }
+
 
 
         private fun checkPermission(): Boolean {

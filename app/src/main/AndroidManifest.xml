@@ -16,6 +16,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YazLabProject">
         <activity
+            android:name=".basvuruDevam"
+            android:exported="false" />
+        <activity
+            android:name=".basvuruDevamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".formlarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DersintibakiList"
+            android:exported="false" />
+        <activity
+            android:name=".CapList"
+            android:exported="false" />
+        <activity
+            android:name=".DgsList"
+            android:exported="false" />
+        <activity
+            android:name=".YatayGecicList"
+            android:exported="false" />
+        <activity
+            android:name=".YazOkuluList"
+            android:exported="false" />
+        <activity
+            android:name=".raporlarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PdfUploadActivity"
+            android:exported="false" />
+        <activity
             android:name=".Dersintibaki"
             android:exported="false" />
         <activity
@@ -34,7 +64,7 @@
             android:name=".basvurlarActivity"
             android:exported="true" />
         <activity
-            android:name=".AnaEkran"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".ImageUploadActivity"
@@ -46,7 +76,7 @@
             android:name=".UyeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".AnaEkran"
             android:exported="false" />
         <activity
             android:name=".GirisActivity"

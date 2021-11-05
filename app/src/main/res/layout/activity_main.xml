@@ -10,35 +10,127 @@
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeProfilEmail"
+        app:layout_constraintTop_toBottomOf="@+id/uyeProfilDogum"
         app:menu="@menu/settings" />
 
 
     <TextView
-        android:id="@+id/UyeProfilEmail"
-        android:layout_width="225dp"
+        android:id="@+id/textviewOkul"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="321dp"
-        android:text="kesemenere123@gmail.com"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeProfilAdSoyad" />
-
-    <TextView
-        android:id="@+id/UyeProfilAdSoyad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="196dp"
-        android:layout_marginBottom="30dp"
-        android:text="Feyyaz Can Köse"
-        app:layout_constraintBottom_toTopOf="@+id/UyeProfilEmail"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="37dp"
+        android:text="Kocaeli Üniversitesi"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/uyeProfilFakulte"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/uyeProfilBolum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="13dp"
+        android:text="Bölüm"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/uyeProfilNumara"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uyeProfilFakulte" />
+
+    <TextView
+        android:id="@+id/uyeProfilSinif"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="12dp"
+        android:text="Sınıfı"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/uyeProfilDogum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UyeProfilEmail" />
+
+    <TextView
+        android:id="@+id/uyeProfilAdSoyad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="14dp"
+        android:text="Ad Soyad"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/UyeProfilEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uyeProfilNumara" />
+
+    <TextView
+        android:id="@+id/uyeProfilDogum"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="159dp"
+        android:text="Doğum Tarihi"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uyeProfilSinif" />
+
+    <TextView
+        android:id="@+id/UyeProfilEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="10dp"
+        android:text="Kullanıcı E-posta"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/uyeProfilSinif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uyeProfilAdSoyad" />
+
+    <TextView
+        android:id="@+id/uyeProfilNumara"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="21dp"
+        android:text="Okul Numarası"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/uyeProfilAdSoyad"
+        app:layout_constraintEnd_toEndOf="@+id/uyeProfilBolum"
+        app:layout_constraintStart_toStartOf="@+id/uyeProfilAdSoyad"
+        app:layout_constraintTop_toBottomOf="@+id/uyeProfilBolum" />
+
+    <TextView
+        android:id="@+id/uyeProfilFakulte"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="10dp"
+        android:text="Fakülte"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/uyeProfilBolum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textviewOkul" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

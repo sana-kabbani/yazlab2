@@ -11,10 +11,10 @@
 
 
     <LinearLayout
-        android:orientation="vertical"
-        android:weightSum="10"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
 
         <TextView
             android:id="@+id/title"
@@ -30,15 +30,24 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/form4" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kişisel Bilgiler"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
+
             android:ems="10"
+            android:text=" Kişisel Bilgiler"
             android:textSize="25dp"></TextView>
 
 
@@ -54,123 +63,226 @@
                         tools:ignore="SpeakableTextPresentCheck" /> -->
 
 
-
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/capphone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+
             android:layout_marginBottom="8dp"
+
             android:ems="10"
             android:hint="Telefon No"
             android:inputType="number"
-
             android:textSize="20sp"
-            />
+            app:boxStrokeColor="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resimLayout"
+            app:startIconContentDescription="text"
+            app:startIconDrawable="@drawable/smartphone"
+            app:startIconTint="@color/purple_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Eğitim Bilgileri "
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
+
             android:ems="10"
+            android:text=" Eğitim Bilgileri "
             android:textSize="25dp"></TextView>
 
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/capfak"
-            android:layout_width="346dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+
             android:layout_marginBottom="8dp"
+
             android:ems="10"
             android:hint="Anadal Fakültesi"
-
             android:textSize="20sp"
-            />
+            app:boxStrokeColor="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resimLayout"
+            app:startIconContentDescription="text"
+            app:startIconDrawable="@drawable/knowledge"
+            app:startIconTint="@color/purple_500">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/capbolum"
-            android:layout_width="346dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+
             android:layout_marginBottom="8dp"
+
             android:ems="10"
             android:hint="Anadal Bölümü"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resimLayout"
+            app:startIconContentDescription="text"
+            app:startIconDrawable="@drawable/books2"
+            app:startIconTint="@color/purple_500">
 
-            android:textSize="20sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-        <EditText
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/capsinif"
-            android:layout_width="347dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+
             android:layout_marginBottom="8dp"
+
             android:ems="10"
             android:hint="Sınıf"
             android:inputType="number"
             android:textSize="20sp"
-            />
+            app:boxStrokeColor="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resimLayout"
+            app:startIconContentDescription="text"
+            app:startIconDrawable="@drawable/lesson"
+            app:startIconTint="@color/purple_500">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/gano"
-            android:layout_width="347dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+
             android:layout_marginBottom="8dp"
-            android:height="50dp"
+
             android:ems="10"
-            android:gravity="start|top"
             android:hint="Genel Not Ortalaması"
-            android:inputType="number"
-            android:textSize="20sp" />
+            android:inputType="numberDecimal"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resimLayout"
+            app:startIconContentDescription="text"
+            app:startIconDrawable="@drawable/score"
+            app:startIconTint="@color/purple_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Program Tercihi"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
+            android:text=" Program Tercihi"
+            android:textColor="#676767"
             android:textSize="25dp"></TextView>
 
-
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/captercih"
-            android:layout_width="347dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="345dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+
             android:layout_marginBottom="8dp"
+
             android:ems="10"
             android:hint="program tercihi"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/purple_500"
+            app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resimLayout"
+            app:startIconContentDescription="text"
+            app:startIconDrawable="@drawable/book"
+            app:startIconTint="@color/purple_500">
 
-            android:textSize="20sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btnPdf"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
-            android:text="Form Pdf'i Oluştur" />
+            android:text="Form Pdf'i Oluştur"
+            android:textColor="#686868"
+            app:elevation="6dp"
+            app:strokeColor="#8A8A8A"
+            app:strokeWidth="1dp" />
 
         <Button
             android:id="@+id/btnPdfUpload"
@@ -180,7 +292,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
-            android:text="Yükle"  />
+            android:text="Yükle"
+            android:textColor="#fff"
+            app:backgroundTint="#50C9D4"
+            app:elevation="6dp"
+            app:strokeColor="#8A8A8A"
+            app:strokeWidth="1dp" />
 
     </LinearLayout>
 

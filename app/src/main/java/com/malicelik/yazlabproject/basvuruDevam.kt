@@ -16,16 +16,13 @@ import java.lang.StringBuilder
 
 class basvuruDevam : AppCompatActivity() {
 
-    private lateinit var dbReferance: DatabaseReference
+
+    //Binding bağlantısı
+    lateinit var binding: ActivityBasvuruDevamBinding
+
+    //pdf tipinden bir array list oluşturma.
     private lateinit var pdfArrayList: ArrayList<Pdf>
 
-    lateinit var binding: ActivityBasvuruDevamBinding
-    var TaskList = ArrayList<Task>()
-
-    private lateinit var auth: FirebaseAuth
-    var databaseReference: DatabaseReference?=null //database refreanse almak için
-    var database: FirebaseDatabase?=null
-    var rol = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,42 +30,7 @@ class basvuruDevam : AppCompatActivity() {
         setContentView(binding.root)
 
         //veri Hazırlığı
-
-
-        //binding.recylerView.layoutManager=LinearLayoutManager(this)
-        //binding.recylerView.setHasFixedSize(true)
-        //binding.recylerView.adapter=adapter
-
-        pdfArrayList = arrayListOf<Pdf>()
-
-
-        auth = FirebaseAuth.getInstance()//konum belirleme
-        database = FirebaseDatabase.getInstance()//
-        databaseReference=database?.reference!!.child("profile")
-        var currentUser = auth.currentUser
-
-        //realtime - database'deki id ye ulaşıp altındaki childların içindeki veriyi sayfaya aktarıyoruz.
-        var userReference = databaseReference?.child(currentUser?.uid!!)
-        userReference?.addValueEventListener(object : ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-
-
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
-
-
-
-
-
-
-
-
+        binding
 
 
 

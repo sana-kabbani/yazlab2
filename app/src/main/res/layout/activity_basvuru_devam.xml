@@ -1,18 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".basvuruDevam">
+    tools:context=".basvuruDevam"
+    android:stretchColumns="1,2,3">
 
-    <TextView
-        android:id="@+id/deneme"
-        android:layout_width="wrap_content"
+    <TableRow
+        android:paddingTop="30dp"
+        >
+        <TextView
+            android:id="@+id/deneme"
+            android:text="Başvuru"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="1" />
+
+        <TextView
+            android:text="Durum"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="2" />
+
+        <TextView
+            android:text="Görüntüle"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_column="3" />
+    </TableRow>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyler_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Deneme"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:listitem="@layout/recycler_row"
+
+
+        />
+
+</TableLayout>

@@ -23,7 +23,7 @@ import java.io.IOException
 
 class YazOkulu : AppCompatActivity() {
     lateinit var binding: ActivityYazOkuluBinding
-    lateinit var tc: EditText
+
 
     lateinit var dersadi: EditText
     lateinit var derskodu: EditText
@@ -38,6 +38,7 @@ class YazOkulu : AppCompatActivity() {
     var sinif: String? = null
     var email: String? = null
     var selected: Int? = null
+    var tc: String? = null
 
     val informationArray = arrayOf(
         "TC : ",
@@ -78,6 +79,7 @@ class YazOkulu : AppCompatActivity() {
                 adisoyadi = snapshot.child("adisoyadi").value.toString()
                 ogrno = snapshot.child("ogrencino").value.toString()
                 rol=snapshot.child("rol").value.toString().toInt()
+                tc = snapshot.child("Tc").value.toString()
 
             }
 
@@ -144,7 +146,7 @@ class YazOkulu : AppCompatActivity() {
 
 
         fun generatePDF() {
-            tc = findViewById(R.id.UyeTc)
+
 
             dersadi = findViewById(R.id.dersadi)
             derskodu = findViewById(R.id.derskodu)
@@ -154,7 +156,7 @@ class YazOkulu : AppCompatActivity() {
             derskredi2 = findViewById(R.id.derskredi2)
 
 
-            if (tc.text.toString().length == 0 || dersadi.text.toString().length == 0 || derskodu.text.toString().length == 0 || derskredi.text.toString().length == 0) {
+            if ( dersadi.text.toString().length == 0 || derskodu.text.toString().length == 0 || derskredi.text.toString().length == 0) {
                 Toast.makeText(this, "some fields empty", Toast.LENGTH_LONG).show()
 
 
@@ -231,7 +233,7 @@ class YazOkulu : AppCompatActivity() {
 
 
                 canvas.drawText(
-                    informationArray[0] + tc.text.toString(),
+                    informationArray[0] + tc,
                     startXPosition.toFloat(),
                     startlPosition.toFloat(),
                     myPaint

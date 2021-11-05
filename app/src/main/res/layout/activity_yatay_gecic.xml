@@ -42,27 +42,7 @@
                 android:textSize="25dp"></TextView>
 
 
-
-            <EditText
-                android:id="@+id/yatayTc"
-                android:layout_width="345dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="8dp"
-                android:ems="10"
-                android:hint="T.C"
-                android:inputType="number"
-                android:textSize="20sp"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                />
-
-
-
-<!--
+            <!--
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="348dp"
@@ -115,21 +95,6 @@
 
 
             <EditText
-                android:id="@+id/unadi"
-                android:layout_width="346dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="8dp"
-                android:ems="10"
-                android:hint="Üniversite Adi"
-
-                android:textSize="20sp"
-                 />
-
-
-            <EditText
                 android:id="@+id/genoortalama"
                 android:layout_width="347dp"
                 android:layout_height="wrap_content"
@@ -141,7 +106,7 @@
                 android:ems="10"
                 android:gravity="start|top"
                 android:hint="Genel Not Ortalaması"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textSize="20sp" />
 
             <EditText

@@ -26,16 +26,11 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class YatayGecic : AppCompatActivity() {
-    var mydate: Date? = null
-    var dateFormat: DateFormat? = null
-
 
         lateinit var binding: ActivityYatayGecicBinding
-        lateinit var tc: EditText
 
         lateinit var uyruk: EditText
         lateinit var tel: EditText
-        lateinit var euniv: EditText
     lateinit var gnortalama: EditText
 
         lateinit var girisyil: EditText
@@ -46,6 +41,7 @@ class YatayGecic : AppCompatActivity() {
         var adisoyadi: String? = null
         var email: String? = null
         var dogtarihi: String? = null
+    var tc: String? = null
 
         val informationArray = arrayOf(
             "TC : ",
@@ -95,6 +91,7 @@ class YatayGecic : AppCompatActivity() {
                     adisoyadi = snapshot.child("adisoyadi").value.toString()
                     dogtarihi = snapshot.child("tarih").value.toString()
                     ogrno = snapshot.child("ogrencino").value.toString()
+                    tc = snapshot.child("Tc").value.toString()
 
                 }
 
@@ -126,31 +123,19 @@ class YatayGecic : AppCompatActivity() {
             }
         }
         fun generatePDF() {
-            mydate = Date()
-            tc = findViewById(R.id.yatayTc)
+
+
             gnortalama = findViewById(R.id.genoortalama)
 
 
             uyruk = findViewById(R.id.uyuruk)
             tel = findViewById(R.id.phone)
-            euniv = findViewById(R.id.unadi)
+
 
             girisyil = findViewById(R.id.giryil)
             ybolum = findViewById(R.id.ygbolum)
             yfak = findViewById(R.id.ytfakulte)
             tabanpuan = findViewById(R.id.puan)
-
-
-        //    if (tc.text.toString().length == 0 || uyruk.text.toString().length == 0 || tel.text.toString().length == 0 || euniv.text.toString().length == 0) {
-               // Toast.makeText(this, "some fields empty", Toast.LENGTH_LONG).show()
-
-
-          //  } else {
-
-
-
-
-
 
                 val pdfDocument = PdfDocument()
 
@@ -163,11 +148,8 @@ class YatayGecic : AppCompatActivity() {
                 val canvas = myPage.canvas
 
 
-
                 //removing weird spaces
                 myPaint.setTypeface(Typeface.create(Typeface.MONOSPACE, Typeface.NORMAL));
-
-
 
                 myPaint.textAlign = Paint.Align.CENTER
                 myPaint.textSize = 12f
@@ -200,8 +182,6 @@ class YatayGecic : AppCompatActivity() {
                 // print the rows
                 for (i in 0..5) {
 
-
-
                     canvas.drawLine(
                         startXPosition.toFloat(),
                         startYPosition + 3.toFloat(),
@@ -217,12 +197,12 @@ class YatayGecic : AppCompatActivity() {
 
 
 
-                canvas.drawText(
-                    informationArray[0] + tc.text.toString(),
-                    startXPosition.toFloat(),
-                    startlPosition.toFloat(),
-                    myPaint
-                )
+            canvas.drawText(
+                informationArray[0] + tc,
+                startXPosition.toFloat(),
+                startlPosition.toFloat(),
+                myPaint
+            )
 
                 startlPosition += 20
             canvas.drawText(
@@ -291,7 +271,7 @@ class YatayGecic : AppCompatActivity() {
             }
             startlPosition = 240
             canvas.drawText(
-                euniArray[0] + euniv.text.toString(),
+                euniArray[0] + "Kocaeli Üniversitesi",
                 startXPosition.toFloat(),
                 startlPosition.toFloat(),
                 myPaint

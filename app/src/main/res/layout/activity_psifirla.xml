@@ -36,37 +36,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <com.google.android.material.textfield.TextInputLayout
+    <EditText
         android:id="@+id/pSifirlaEmail"
-        android:layout_width="345dp"
+        android:layout_width="236dp"
         android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/purple_500"
-        app:startIconDrawable="@drawable/email"
-        app:startIconContentDescription="text"
-        app:startIconTint="#EB424242"
-
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="88dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="88dp"
         android:ems="10"
-        android:textSize="20sp"
         android:hint="E-posta adrsini yazınız"
         android:inputType="textEmailAddress"
-
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pSifirlaMsj" >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
+        app:layout_constraintTop_toBottomOf="@+id/pSifirlaMsj" />
 
     <Button
         android:id="@+id/pSifirlaBtn"
@@ -78,11 +61,6 @@
         android:layout_marginBottom="32dp"
         android:text="Parolamı Sıfırla"
         android:textSize="16sp"
-        android:textColor="#fff"
-        app:backgroundTint="#50D47B"
-        app:strokeWidth="1dp"
-        app:strokeColor="#8A8A8A"
-        app:elevation="6dp"
         app:layout_constraintBottom_toTopOf="@+id/pSifirlaGiris"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,11 +75,6 @@
         android:layout_marginBottom="24dp"
         android:text="Giriş Yap"
         android:textSize="16sp"
-        style="?attr/materialButtonOutlinedStyle"
-        android:textColor="#303378"
-        app:strokeWidth="1dp"
-        app:strokeColor="#8A8A8A"
-        app:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

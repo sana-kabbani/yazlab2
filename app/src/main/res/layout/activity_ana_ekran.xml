@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bc2"
     tools:context=".AnaEkran">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,61 +21,27 @@
     <Button
         android:id="@+id/formBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="81dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="Raporlar"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        app:backgroundTint="#50D47B"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/formBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/rapor" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toTopOf="@+id/basvuruBtn"
-        app:layout_constraintEnd_toEndOf="@+id/basvuruBtn"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/basvuruBtn"
-        app:layout_constraintTop_toBottomOf="@+id/formBtn"
-        app:srcCompat="@drawable/form" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/basvuruBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="55dp"
-
-        android:fontFamily="@font/roboto_medium"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="244dp"
         android:text="Başvurular"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        app:backgroundTint="#50D47B"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/formBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

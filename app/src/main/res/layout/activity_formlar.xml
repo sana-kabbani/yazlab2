@@ -4,65 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bc2"
     tools:context=".formlarActivity">
-
 
     <Button
         android:id="@+id/basvuruBtnSonuc"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="85dp"
-        android:fontFamily="@font/roboto_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="257dp"
+        android:layout_marginBottom="44dp"
         android:text="Sonuçlanmış Başvurular"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        android:textAlignment="center"
-        app:backgroundTint="#50D47B"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintBottom_toTopOf="@+id/basvuruBtnDevam"
+        app:layout_constraintStart_toStartOf="@+id/basvuruBtnDevam"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/basvuruBtnDevam"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="81dp"
-        android:fontFamily="@font/roboto_medium"
+        android:layout_width="252dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="262dp"
         android:text="Devam Eden Başvurular"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        app:backgroundTint="#50D47B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/basvuruBtnSonuc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/completed" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="150dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/basvuruBtnDevam"
-        app:layout_constraintEnd_toEndOf="@+id/basvuruBtnDevam"
-        app:layout_constraintStart_toStartOf="@+id/basvuruBtnDevam"
-        app:layout_constraintTop_toBottomOf="@+id/basvuruBtnSonuc"
-        app:srcCompat="@drawable/continue2" />
-
+        app:layout_constraintTop_toBottomOf="@+id/basvuruBtnSonuc" />
 </androidx.constraintlayout.widget.ConstraintLayout>

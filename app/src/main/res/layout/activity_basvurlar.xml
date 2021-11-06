@@ -1,306 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background4"
     tools:context=".basvurlarActivity">
-
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="Başvurlar"
-        android:textColor="@color/white"
-        android:textSize="45sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="112dp"
-        android:layout_height="103dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="414dp"
-        android:layout_height="450dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0">
-
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:padding="10dp"
-            android:rowCount="3">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                android:paddingLeft="10dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                app:backgroundTint="@color/white"
-                android:backgroundTint="@color/white"
-
-
-
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/contact1" />
-
-
-                    <Button
-                        android:id="@+id/yazbutton"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="10dp"
-                        android:text="YazOkul"
-                        android:textColor="#686868"
-                        android:textColorHighlight="#814343"
-                        app:elevation="6dp"
-                        app:strokeColor="#8A8A8A"
-                        app:strokeWidth="1dp"
-
-                        />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                android:backgroundTint="@color/white"
-
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/contact3" />
-
-
-                    <Button
-                        android:id="@+id/yataybutton"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="10dp"
-                        android:text="yataygeçiş"
-                        android:textColor="#686868"
-                        app:elevation="6dp"
-                        app:strokeColor="#8A8A8A"
-                        app:strokeWidth="1dp" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                android:backgroundTint="@color/white"
-
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/contact7" />
-
-
-                    <Button
-                        android:id="@+id/dersintibakibutton"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Ders Intibakı"
-                        android:textColor="#686868"
-                        app:elevation="6dp"
-                        app:strokeColor="#8A8A8A"
-                        app:strokeWidth="1dp" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                android:backgroundTint="@color/white"
-
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-
-                    >
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/contact4" />
-
-
-                    <Button
-                        android:id="@+id/dgsbutton"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="10dp"
-                        android:text="DGS"
-                        android:textColor="#686868"
-                        app:elevation="6dp"
-                        app:strokeColor="#8A8A8A"
-                        app:strokeWidth="1dp" />
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_margin="12dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="6dp"
-                android:backgroundTint="@color/white"
-
-                >
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/contact5" />
-
-
-                    <Button
-                        android:id="@+id/capbutton"
-                        style="?attr/materialButtonOutlinedStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/roboto_light"
-                        android:text="ÇAP"
-                        android:textColor="#686868"
-                        app:elevation="6dp"
-                        app:strokeColor="#8A8A8A"
-                        app:strokeWidth="1dp">
-
-
-                    </Button>
-
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </GridLayout>
-
-
-    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:backgroundTint="@color/black"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="scrollView2"
-        app:menu="@menu/menu">
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:menu="@menu/menu" />
+
+    <Button
+        android:id="@+id/yazbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginBottom="15dp"
+        android:text="YazOkul Başvuru"
+        android:textColorHighlight="#814343"
+        app:layout_constraintBottom_toTopOf="@+id/yataybutton"
+        app:layout_constraintEnd_toEndOf="@+id/yataybutton"
+        app:layout_constraintStart_toStartOf="@+id/yataybutton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yataybutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+
+        android:text="yataygeçiş Başvuru"
+        app:layout_constraintBottom_toTopOf="@+id/dgsbutton"
+        app:layout_constraintEnd_toEndOf="@+id/dgsbutton"
+        app:layout_constraintStart_toStartOf="@+id/dgsbutton"
+        app:layout_constraintTop_toBottomOf="@+id/yazbutton" />
+
+    <Button
+        android:id="@+id/dgsbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+
+        android:text="DGS Başvurusu"
+        app:layout_constraintBottom_toTopOf="@+id/capbutton"
+        app:layout_constraintEnd_toEndOf="@+id/capbutton"
+        app:layout_constraintStart_toStartOf="@+id/capbutton"
+        app:layout_constraintTop_toBottomOf="@+id/yataybutton" />
 
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <Button
+        android:id="@+id/capbutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+
+        android:text="ÇAP Başvurusu"
+        app:layout_constraintBottom_toTopOf="@+id/dersintibakibutton"
+        app:layout_constraintEnd_toEndOf="@+id/dersintibakibutton"
+        app:layout_constraintStart_toStartOf="@+id/dersintibakibutton"
+        app:layout_constraintTop_toBottomOf="@+id/dgsbutton" />
+
+    <Button
+        android:id="@+id/dersintibakibutton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="142dp"
+
+        android:text="Ders Intibakı Başvurusu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capbutton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

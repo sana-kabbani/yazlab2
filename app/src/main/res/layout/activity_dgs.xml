@@ -29,14 +29,6 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            app:srcCompat="@drawable/form3"
-            android:layout_gravity="center"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,43 +52,25 @@
                         android:autofillHints="Bölüm"
                         tools:ignore="SpeakableTextPresentCheck" /> -->
 
-        <  <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dgsuyuruk"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        app:boxStrokeColor="@color/purple_500"
-        app:startIconDrawable="@drawable/flag"
-        app:startIconContentDescription="text"
-        app:startIconTint="#EB424242"
+        <EditText
+            android:id="@+id/dgsuyuruk"
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:hint="Uyuruğu"
 
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/UyeAdSoyad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Uyuruğu"
-        android:textSize="20sp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/dgsphone"
             android:layout_width="345dp"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/purple_500"
-            app:startIconDrawable="@drawable/smartphone"
-            app:startIconContentDescription="text"
-            app:startIconTint="#EB424242"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
@@ -104,15 +78,9 @@
             android:ems="10"
             android:hint="Telefon No"
             android:inputType="number"
+
             android:textSize="20sp"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,99 +93,54 @@
             android:textSize="25dp"></TextView>
 
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/unadi"
-            android:layout_width="345dp"
+            android:layout_width="346dp"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/purple_500"
-            app:startIconDrawable="@drawable/university"
-            app:startIconContentDescription="text"
-            app:startIconTint="#EB424242"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:hint="Üniversite Adi"
+
             android:textSize="20sp"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            />
 
 
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/program"
-            android:layout_width="345dp"
+            android:layout_width="347dp"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/purple_500"
-            app:startIconDrawable="@drawable/book"
-            app:startIconContentDescription="text"
-            app:startIconTint="#EB424242"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
+            android:height="50dp"
             android:ems="10"
             android:gravity="start|top"
             android:hint="programı"
-            android:textSize="20sp"
-            >
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+            android:textSize="20sp" />
+        <EditText
             android:id="@+id/dgsnot"
-            android:layout_width="345dp"
+            android:layout_width="347dp"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/purple_500"
-            app:startIconDrawable="@drawable/score"
-            app:startIconContentDescription="text"
-            app:startIconTint="#EB424242"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
+            android:height="50dp"
             android:ems="10"
             android:gravity="start|top"
             android:hint="Diploma Notu"
-            android:textSize="20sp"
-            >
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            android:textSize="20sp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/meztarihi"
-            android:layout_width="345dp"
+            android:layout_width="347dp"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/purple_500"
-            app:startIconDrawable="@drawable/graduation_hat"
-            app:startIconContentDescription="text"
-            app:startIconTint="#EB424242"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
@@ -226,14 +149,7 @@
             android:hint="Mezun Yılı"
             android:inputType="number"
             android:textSize="20sp"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -246,31 +162,19 @@
             android:textSize="25dp"></TextView>
 
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/sinav"
-            android:layout_width="345dp"
+            android:layout_width="347dp"
             android:layout_height="wrap_content"
-            app:boxStrokeColor="@color/purple_500"
-            app:startIconDrawable="@drawable/address"
-            app:startIconContentDescription="text"
-            app:startIconTint="#EB424242"
-
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
             android:ems="10"
             android:hint="Merkez Tercihi"
+
             android:textSize="20sp"
-            >
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            />
 
 
 
@@ -282,13 +186,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
-            android:text="Form Pdf'i Oluştur"
-            style="?attr/materialButtonOutlinedStyle"
-            android:textColor="#686868"
-            app:strokeWidth="1dp"
-            app:strokeColor="#8A8A8A"
-            app:elevation="6dp"
-            />
+            android:text="Form Pdf'i Oluştur" />
 
         <Button
             android:id="@+id/btnPdfUpload"
@@ -298,12 +196,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="8dp"
-            android:text="Yükle"
-            android:textColor="#fff"
-            app:backgroundTint="#50C9D4"
-            app:strokeWidth="1dp"
-            app:strokeColor="#8A8A8A"
-            app:elevation="6dp"/>
+            android:text="Yükle"  />
 
     </LinearLayout>
 

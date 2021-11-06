@@ -24,7 +24,7 @@ import java.io.IOException
 
 class Dersintibaki : AppCompatActivity() {
     lateinit var binding: ActivityDersintibakiBinding
-    lateinit var tc: EditText
+
     lateinit var tel: EditText
 
     lateinit var ders1: EditText
@@ -39,6 +39,7 @@ class Dersintibaki : AppCompatActivity() {
     var fakulte: String? = null
     var sinif: String? = null
     var email: String? = null
+    var tc: String? = null
     var selected: Int? = null
 
     val informationArray = arrayOf(
@@ -76,6 +77,7 @@ class Dersintibaki : AppCompatActivity() {
                 bolum = snapshot.child("bolum").value.toString()
                 adisoyadi = snapshot.child("adisoyadi").value.toString()
                 ogrno = snapshot.child("ogrencino").value.toString()
+               tc = snapshot.child("Tc").value.toString()
 
             }
 
@@ -137,7 +139,7 @@ class Dersintibaki : AppCompatActivity() {
         }
     }
     fun generatePDF() {
-        tc = findViewById(R.id.dersTc)
+
 tel=findViewById(R.id.dersphone)
         ders1 = findViewById(R.id.ders1)
         notu1 = findViewById(R.id.basarinotu)
@@ -224,7 +226,7 @@ tel=findViewById(R.id.dersphone)
 
 
             canvas.drawText(
-                informationArray[0] + tc.text.toString(),
+                informationArray[0] + tc,
                 startXPosition.toFloat(),
                 startlPosition.toFloat(),
                 myPaint

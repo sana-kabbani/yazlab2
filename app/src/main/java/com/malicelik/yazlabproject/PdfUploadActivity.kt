@@ -174,9 +174,8 @@ class PdfUploadActivity : AppCompatActivity() {
 
 
         //RealTimeDataBase PDF Bilgilerini Yükleme
-        val ref = FirebaseDatabase.getInstance().getReference("profile")
-        ref.child("$userid")
-            .child("pdf").child("$timestamp").setValue(hashMap)
+        val ref = FirebaseDatabase.getInstance().getReference("FilePdf")
+        ref.child("$timestamp").setValue(hashMap)
             .addOnSuccessListener {
                 Log.d(TAG,"uploadPdfInfoToDb:  uploadED TO DB ")
                 progressDialog.dismiss()

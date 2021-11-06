@@ -103,6 +103,7 @@ class UyeActivity : AppCompatActivity() {
             var UyeOgrNo = binding.UyeOgrNo.text.toString().toIntOrNull()
             var UyeAdres = binding.UyeAdres.text.toString()
             var UyeSinif = binding.UyeSinif.text.toString().toIntOrNull()
+            var UyeTc = binding.UyeTc.text.toString().toIntOrNull()
 
 
             if(TextUtils.isEmpty(UyeEmail)){
@@ -182,11 +183,16 @@ class UyeActivity : AppCompatActivity() {
                         currentUserDb?.child("adisoyadi")?.setValue(binding.UyeAdSoyad.text.toString())
                         currentUserDb?.child("ogrencino")?.setValue(binding.UyeOgrNo.text.toString())
                         currentUserDb?.child("sinif")?.setValue(binding.UyeSinif.text.toString().toInt())
+                        currentUserDb?.child("ogrencino")?.setValue(binding.UyeOgrNo.text.toString())
+
 
                         currentUserDb?.child("tarih")?.setValue(date)
                         currentUserDb?.child("adress")?.setValue(binding.UyeAdres.text.toString())
                         currentUserDb?.child("fakulte")?.setValue(binding.spinner.selectedItem.toString())
                         currentUserDb?.child("bolum")?.setValue(binding.spinner2.selectedItem.toString())
+                        currentUserDb?.child("Tc")?.setValue(binding.UyeTc.text.toString())
+
+
 
                         currentUserDb?.child("rol")?.setValue(1)
                         Toast.makeText(this@UyeActivity,"Kayıt Basarılı",Toast.LENGTH_LONG).show()

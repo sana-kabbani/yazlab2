@@ -17,14 +17,16 @@ class formlarActivity : AppCompatActivity() {
 
 
         binding.basvuruBtnDevam.setOnClickListener {
-            intent = Intent(applicationContext,basvuruDevam::class.java)
+            intent = Intent(applicationContext,BasvurusuDevamEden::class.java)
             startActivity(intent)
             onPause()
 
         }
 
-        binding.basvuruBtnSonuc.setOnClickListener {
-
+        binding.basvuruBtnSonuc.setOnClickListener{
+            intent = Intent(applicationContext,BasvuruBitenActivity::class.java)
+            startActivity(intent)
+            onPause()
 
         }
     }

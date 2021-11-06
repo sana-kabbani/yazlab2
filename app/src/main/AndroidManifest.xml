@@ -11,18 +11,18 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Kocaeli Üniversite Başvuruları"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.YazLabProject">
         <activity
-            android:name=".basvuruDevam"
-            android:exported="false" />
-        <activity
-            android:name=".basvuruDevamActivity"
-            android:exported="false" />
-        <activity
             android:name=".formlarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BasvurusuDevamEden"
+            android:exported="false" />
+        <activity
+            android:name=".BasvuruBitenActivity"
             android:exported="false" />
         <activity
             android:name=".DersintibakiList"

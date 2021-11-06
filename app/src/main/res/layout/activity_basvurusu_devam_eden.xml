@@ -1,11 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".basvuruDevam"
+    tools:context=".BasvurusuDevamEden"
     android:stretchColumns="1,2,3">
+    <LinearLayout android:textAlignment="center" android:layout_margin="40dp">
 
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Pdf Görüntülemek için için Lütfen başvurunun üstüne tıklayın."
+            android:textAlignment="center"
+
+            android:visibility="visible" />
+
+
+    </LinearLayout>
     <TableRow
         android:paddingTop="30dp"
         >
@@ -26,22 +39,19 @@
             android:gravity="center"
             android:layout_column="2" />
 
-        <TextView
-            android:text="Görüntüle"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:gravity="center"
-            android:layout_column="3" />
+
     </TableRow>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyler_view"
+        android:id="@+id/taskRv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/recycler_row"
 
 
         />
+
+
 
 </TableLayout>

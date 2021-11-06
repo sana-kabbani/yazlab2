@@ -42,26 +42,6 @@
             android:textSize="25dp"></TextView>
 
 
-
-        <EditText
-            android:id="@+id/capTc"
-            android:layout_width="345dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:hint="T.C"
-            android:inputType="number"
-            android:textSize="20sp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
-
-
-
         <!--
                     <Spinner
                         android:id="@+id/spinner"

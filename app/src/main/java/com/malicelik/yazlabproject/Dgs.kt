@@ -25,7 +25,7 @@ import java.io.IOException
 
 class Dgs : AppCompatActivity() {
     lateinit var binding: ActivityDgsBinding
-    lateinit var tc: EditText
+
 
     lateinit var uyruk: EditText
     lateinit var tel: EditText
@@ -40,6 +40,8 @@ class Dgs : AppCompatActivity() {
     var adisoyadi: String? = null
     var email: String? = null
     var dogtarihi: String? = null
+    var tc: String? = null
+
 
     val informationArray = arrayOf(
         "TC : ",
@@ -85,6 +87,7 @@ class Dgs : AppCompatActivity() {
                 adisoyadi = snapshot.child("adisoyadi").value.toString()
                 dogtarihi = snapshot.child("tarih").value.toString()
                 ogrno = snapshot.child("ogrencino").value.toString()
+                tc = snapshot.child("Tc").value.toString()
 
             }
 
@@ -116,7 +119,7 @@ class Dgs : AppCompatActivity() {
         }
     }
     fun generatePDF() {
-        tc = findViewById(R.id.dgsTc)
+
         program = findViewById(R.id.program)
 
 
@@ -206,7 +209,7 @@ class Dgs : AppCompatActivity() {
 
 
         canvas.drawText(
-            informationArray[0] + tc.text.toString(),
+            informationArray[0] + tc,
             startXPosition.toFloat(),
             startlPosition.toFloat(),
             myPaint

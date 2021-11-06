@@ -6,14 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ImageUploadActivity">
 
+
     <Button
         android:id="@+id/btnSec"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="78dp"
         android:text="SEÇ"
+        android:textColor="#686868"
+        app:elevation="6dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/btnYukle"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/ImagePicture"
+        app:strokeColor="#8A8A8A"
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/btnYukle"
@@ -22,18 +27,25 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="63dp"
         android:text="Kaydet"
+        android:textColor="#fff"
+        app:backgroundTint="#50D47B"
+        app:elevation="6dp"
+        app:layout_constraintEnd_toEndOf="@+id/ImagePicture"
         app:layout_constraintStart_toEndOf="@+id/btnSec"
-        app:layout_constraintTop_toBottomOf="@+id/ImagePicture" />
+        app:layout_constraintTop_toBottomOf="@+id/ImagePicture"
+        app:strokeColor="#8A8A8A"
+        app:strokeWidth="1dp" />
 
     <ImageView
         android:id="@+id/ImagePicture"
-        android:layout_width="0dp"
-        android:layout_height="316dp"
-        android:layout_marginTop="42dp"
+        android:layout_width="246dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/uploadimage"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/default_user" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/kontol"

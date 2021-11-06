@@ -9,21 +9,25 @@
     tools:context=".UyeActivity">
 
 
+
+
 <LinearLayout
     android:orientation="vertical"
     android:weightSum="10"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="344dp"
-        android:layout_height="81dp"
-        android:layout_marginLeft="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
+        android:layout_marginBottom="15dp"
         android:text="Üye Olun "
         android:textAlignment="center"
         android:textSize="34sp"
+        android:textColor="#7E7E7E"
         app:layout_constraintBottom_toTopOf="@+id/UyeOgrNo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -31,25 +35,33 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageView3"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginLeft="25dp"
-        android:src="@drawable/default_user"
+        app:srcCompat="@drawable/books"
+        android:layout_gravity="center"/>
 
-        />
 
-    <Button
-        android:id="@+id/UyeBtnPicture"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/UyeTc"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:text="Resim Seç"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/driver_license24"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="T.C"
+        android:inputType="number"
+        android:textSize="20sp"
+        >
 
     <EditText
         android:id="@+id/UyeTc"
@@ -72,6 +84,13 @@
         android:id="@+id/UyeEmail"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/email"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -83,14 +102,28 @@
         app:layout_constraintBottom_toTopOf="@+id/UyePass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeAdSoyad" />
+        app:layout_constraintTop_toBottomOf="@+id/UyeAdSoyad" >
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/UyeOgrNo"
-        android:layout_width="343dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/numeric"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Öğrenci Numarası"
         android:inputType="number"
@@ -98,12 +131,26 @@
         app:layout_constraintBottom_toTopOf="@+id/UyeAdSoyad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        >
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/UyeAdSoyad"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/id"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -112,15 +159,27 @@
         android:hint="Ad Soyad"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeOgrNo" />
 
-    <EditText
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/UyePass"
-        android:layout_width="346dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/unlock"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -129,10 +188,17 @@
         android:hint="Şifre"
         android:inputType="textPassword"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeAdres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeEmail" />
+
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
     <Spinner
         android:id="@+id/spinner"
@@ -150,33 +216,49 @@
         android:layout_height="58dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-
         android:autofillHints="Bölüm"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/UyeAdres"
-        android:layout_width="347dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/address"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:gravity="start|top"
         android:hint="Adres"
         android:inputType="textMultiLine"
         android:textSize="20sp"
-        android:height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeSinif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyePass" />
 
-    <EditText
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/UyeSinif"
-        android:layout_width="347dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/graduation_hat"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -185,10 +267,15 @@
         android:hint="Sınıf"
         android:inputType="number"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeAdres" />
+
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnDate"
@@ -198,16 +285,22 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:text="Doğum Tarihi" />
+        android:text="Doğum Tarihi"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="#686868"
+        app:strokeWidth="1dp"
+        app:strokeColor="#8A8A8A"
+        app:elevation="6dp"/>
 
     <LinearLayout
         android:layout_width="356dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+        android:layout_margin="20dp"
+        android:gravity="center">
 
         <Button
             android:id="@+id/UyeButtonKayit"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
             android:text="Kayıt ol"
@@ -215,19 +308,30 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UyeDate" />
+            app:layout_constraintTop_toBottomOf="@+id/UyeDate"
+            android:textColor="#fff"
+            app:backgroundTint="#50D47B"
+            app:strokeWidth="1dp"
+            app:strokeColor="#8A8A8A"
+            app:elevation="6dp"/>
 
         <Button
 
             android:id="@+id/uyeGirisBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:text="Giris Yap"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit" />
+            app:layout_constraintTop_toBottomOf="@+id/UyeButtonKayit"
+            style="?attr/materialButtonOutlinedStyle"
+            android:textColor="#303378"
+            app:strokeWidth="1dp"
+            app:strokeColor="#8A8A8A"
+            app:elevation="6dp"/>
+
     </LinearLayout>
 
 </LinearLayout>

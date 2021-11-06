@@ -2,14 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/ic_home"
+        android:enabled="true"
         android:title="Ana Sayfa"
-        android:icon="@drawable/ic_home"/>
+        android:icon="@drawable/email"
+        android:iconTint="@color/black"
+
+        />
     <item
         android:id="@+id/ic_delete"
         android:title="Sil"
-        android:icon="@drawable/ic_delete"/>
+        android:icon="@drawable/ic_delete"
+        android:enabled="true"/>
     <item
         android:id="@+id/ic_exit"
         android:title="Çıkış"
-        android:icon="@drawable/ic_exit"/>
+        android:icon="@drawable/ic_exit"
+        android:enabled="true"/>
 </menu>

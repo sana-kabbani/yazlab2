@@ -13,7 +13,9 @@
       android:orientation="vertical"
       android:weightSum="10"
       android:layout_width="match_parent"
-      android:layout_height="match_parent">
+      android:layout_height="match_parent"
+      android:gravity="center">
+
 
     <TextView
         android:id="@+id/title"
@@ -41,42 +43,71 @@
         android:autofillHints="Bölüm"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dersadi"
-        android:layout_width="343dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/lesson"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="1.Ders Adı"
-
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeAdSoyad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        >
 
-    <EditText
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/derskodu"
         android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/code"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Ders Kodu"
-
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeOgrNo" />
+        >
 
-    <EditText
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/derskredi"
-        android:layout_width="346dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/note"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -85,19 +116,29 @@
         android:hint="Ders Kredisi"
         android:inputType="number"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeAdres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeEmail" />
+        >
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dersadi2"
-        android:layout_width="347dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/lesson"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
@@ -107,45 +148,68 @@
         android:hint="2.Ders Adı"
         android:inputType="textMultiLine"
         android:textSize="20sp"
-        android:height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeSinif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyePass" />
+        >
 
-    <EditText
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/derskodu2"
-        android:layout_width="347dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/code"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Ders Kodu"
-        android:inputType="number"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeAdres" />
+        >
 
-    <EditText
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/derskredi2"
-        android:layout_width="347dp"
+        android:layout_width="345dp"
         android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/purple_500"
+        app:startIconDrawable="@drawable/note"
+        app:startIconContentDescription="text"
+        app:startIconTint="#EB424242"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
         android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:hint="Ders Kredi"
+        android:hint="Ders Kredisi"
         android:inputType="number"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/UyeDate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UyeAdres" />
+        >
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnPdf"
@@ -155,7 +219,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:text="Form Pdf'i Oluştur" />
+        android:text="Form Pdf'i Oluştur"
+        style="?attr/materialButtonOutlinedStyle"
+        android:textColor="#686868"
+        app:strokeWidth="1dp"
+        app:strokeColor="#8A8A8A"
+        app:elevation="6dp"/>
 
     <Button
         android:id="@+id/btnPdfUpload"
@@ -165,12 +234,18 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
-        android:text="Yükle"  />
+        android:text="Yükle"
+        app:backgroundTint="#50C9D4"
+        app:strokeWidth="1dp"
+        app:strokeColor="#8A8A8A"
+        app:elevation="6dp"
+        android:textColor="@color/white"/>
 
     <LinearLayout
         android:layout_width="356dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        />
 
   </LinearLayout>
 
